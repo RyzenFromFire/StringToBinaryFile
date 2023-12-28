@@ -62,6 +62,7 @@ DataType getDataType(char* arg) {
 
   if (strlen(arg) < 1) return NONE;
 
+  // TODO: change base notation away from ' so that terminal doesn't eat it unless escaped
   // X'<value> format
   if (strlen(arg) > 2 && (arg[0] == 'b' || arg[0] == 'h' || arg[0] == 'd') && arg[1] == '\'') {
     if (arg[0] == 'b') {
@@ -258,6 +259,8 @@ void printBinaryFile(std::string filename) {
   if (!rf) {
     std::cout << "Cannot open file!" << std::endl;
   }
+
+  // TODO: Actually implement read functionality
 }
 
 int main(int argc, char** argv) {
