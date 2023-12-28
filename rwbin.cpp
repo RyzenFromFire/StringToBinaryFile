@@ -213,7 +213,7 @@ void writeBinaryFile(std::string content, DataType type, std::string filename) {
     return;
   }
 
-  std::cout << "content = " << content << std::endl;
+  // std::cout << "content = " << content << std::endl;
   
 
   // convert content to binary
@@ -227,8 +227,8 @@ void writeBinaryFile(std::string content, DataType type, std::string filename) {
     binStr = content;
   }
 
-  std::cout << "binStr = " << binStr << std::endl;
-  std::cout << "padding = " << 8 - (binStr.length() % 8) << std::endl;
+  // std::cout << "binStr = " << binStr << std::endl;
+  // std::cout << "padding = " << 8 - (binStr.length() % 8) << std::endl;
 
   // if the length of the resulting binary string is not evenly divisible into bytes, zero pad until it is
   if (binStr.length() % 8 != 0) {
@@ -238,7 +238,7 @@ void writeBinaryFile(std::string content, DataType type, std::string filename) {
     }
   }
 
-  std::cout << "padded binStr = " << binStr << std::endl;
+  // std::cout << "padded binStr = " << binStr << std::endl;
 
   // at this point, the binary string is evenly divisible into bytes
   // package into bytes and write to file
@@ -262,12 +262,12 @@ void printBinaryFile(std::string filename) {
 
 int main(int argc, char** argv) {
   // debug argc, argv
-  std::cout << "argc = " << argc << "  argv = [ ";
-  for (int i = 0; i < argc; i++) {
-    std::cout << argv[i];
-    if (i < argc - 1) std::cout << ", ";
-  }
-  std::cout << " ]" << std::endl;
+  // std::cout << "argc = " << argc << "  argv = [ ";
+  // for (int i = 0; i < argc; i++) {
+  //   std::cout << argv[i];
+  //   if (i < argc - 1) std::cout << ", ";
+  // }
+  // std::cout << " ]" << std::endl;
 
   // if no args, throw help msg and return 1
   if (argc < 2) {
