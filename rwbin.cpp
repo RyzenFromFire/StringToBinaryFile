@@ -2,6 +2,7 @@
 #include <fstream>
 #include <ctype.h>
 #include <regex>
+#include <cstring>
 
 // Command format: 
 //   rwbin [-h | --help]
